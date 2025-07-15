@@ -1,0 +1,12 @@
+[package]
+name = "winter_vaults"
+edition = "2024.beta"
+license = "MIT"
+authors = ["Jose Cerqueira (jose@interestprotocol.com)"]   
+
+[dependencies]
+
+BluefinSpot = { git = "https://github.com/fireflyprotocol/bluefin-spot-contract-interface.git", rev = "main" }
+
+[addresses]
+winter_vaults = "0x0"
