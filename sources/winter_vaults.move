@@ -1,1 +1,0 @@
-module winter_vaults::winter_blue_vaults;

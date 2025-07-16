@@ -7,6 +7,11 @@ authors = ["Jose Cerqueira (jose@interestprotocol.com)"]
 [dependencies]
 
 BluefinSpot = { git = "https://github.com/fireflyprotocol/bluefin-spot-contract-interface.git", rev = "main" }
+IntegerMate = { git = "https://github.com/CetusProtocol/integer-mate.git", subdir = "sui", rev = "sui-v1.1.2" }
+interest_access_control = { r.mvr = "@interest/acl" }
 
 [addresses]
 winter_vaults = "0x0"
+
+[r.mvr]
+network = "mainnet"

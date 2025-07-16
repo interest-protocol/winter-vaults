@@ -2,11 +2,12 @@
 
 [move]
 version = 3
-manifest_digest = "6CE0E3B578510807022CCBE2EBF7342619076E28DEA2098DCEBF3747973FE37C"
-deps_digest = "397E6A9F7A624706DBDFEE056CE88391A15876868FD18A88504DA74EB458D697"
+manifest_digest = "E3E2BD3D23B77808CBBDC94CE4FFABEF2FD817C378C840BE96175986FAB09D49"
+deps_digest = "52B406A7A21811BEF51751CF88DA0E76DAEFFEAC888D4F4060B1A72BBE7D8D35"
 dependencies = [
   { id = "BluefinSpot", name = "BluefinSpot" },
   { id = "Bridge", name = "Bridge" },
+  { id = "InterestAccessControl", name = "InterestAccessControl" },
   { id = "MoveStdlib", name = "MoveStdlib" },
   { id = "Sui", name = "Sui" },
   { id = "SuiSystem", name = "SuiSystem" },
@@ -33,6 +34,15 @@ dependencies = [
 ]
 
 [[move.package]]
+id = "DeepBook"
+source = { git = "https://github.com/MystenLabs/sui.git", rev = "9c04e1840eb5", subdir = "crates/sui-framework/packages/deepbook" }
+
+dependencies = [
+  { id = "MoveStdlib", name = "MoveStdlib" },
+  { id = "Sui", name = "Sui" },
+]
+
+[[move.package]]
 id = "IntegerLibrary"
 source = { git = "https://github.com/fireflyprotocol/integer-library.git", rev = "v1.0.1", subdir = "" }
 
@@ -46,6 +56,18 @@ source = { git = "https://github.com/CetusProtocol/integer-mate.git", rev = "sui
 
 dependencies = [
   { id = "Sui", name = "Sui" },
+]
+
+[[move.package]]
+id = "InterestAccessControl"
+source = { git = "https://github.com/interest-protocol/interest-mvr", rev = "91e2f4f83626c1cb924bac246932574501c21bf8", subdir = "access-control/contracts" }
+
+dependencies = [
+  { id = "Bridge", name = "Bridge" },
+  { id = "DeepBook", name = "DeepBook" },
+  { id = "MoveStdlib", name = "MoveStdlib" },
+  { id = "Sui", name = "Sui" },
+  { id = "SuiSystem", name = "SuiSystem" },
 ]
 
 [[move.package]]
